@@ -108,16 +108,19 @@ button:hover {
     align-items: center;
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
-    position: relative; 
+    position: relative;
     margin-bottom: 10px;
     overflow: hidden;
-    padding-right: 100px; 
-    flex-direction: column;
+    padding-right: 100px;
+    flex-direction: row; /* Set flex-direction to row */
 }
 
+
 .taskSummary button {
-    margin-left: 10px; 
+    display: inline-block; /* Change display to inline-block */
+    margin: 0; /* Remove default margin */
 }
+
 
 .completedTasks .taskSummary {
     opacity: 0.6;
@@ -188,16 +191,26 @@ button:hover {
         height: 30px;
     }
     
+    
     .taskSummary {
-        flex-direction: column; 
-        align-items: flex-start; 
-        margin-bottom: 10px; 
-      
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+        position: relative;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+    .buttonContainer{
+    display: flex;
+        flex-direction: row;
+        
     }
     
-    .taskSummary button {
-        margin-top: 5px; 
-        margin-left: 0; 
-      
+    .buttonContainer button {
+        display: inline-block;
+        margin-right: 5px; /* Add space between buttons */
     }
 }
+
+
