@@ -17,9 +17,11 @@ function addTask() {
         <div>${taskTitle}</div>
         <div>${description}</div>
         <div>${date}</div>
-        <div><button onclick="markDone(this)">Done</button></div>
-        <div><button onclick="editTask(this)">Edit</button></div>
-        <div><button onclick="deleteTask(this)">Delete</button></div>
+        <div class="buttonContainer">
+        <button onclick="markDone(this)"><i class="fa-solid fa-check"></i></button>
+        <button onclick="editTask(this)"><i class="fa-solid fa-pen-to-square"></i></button>
+        <button onclick="deleteTask(this)"><i class="fa-solid fa-trash"></i></button>
+    </div>
     `;
 
     document.querySelector(".right .pendingTasks").appendChild(taskSummary);
